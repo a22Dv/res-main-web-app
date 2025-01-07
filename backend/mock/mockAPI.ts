@@ -34,7 +34,7 @@ export const Authentication = ({studentID, password} : authenticationProps)  => 
 };
 export const Tasks = ({userData} : tasksProps) => {
     if (!userData) {
-        return null
+        return null;
     } else {
         const newTasksMockDatabase = tasksMockDatabase.map(element => {
             return [...element, userData[2]]; 

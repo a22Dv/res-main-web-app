@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+:root {
+    --primary-color: #89343B;
+    --secondary-color: #F8C400;
+    --background-color: #EEEEEE;
+    --primary-font: "Kumbh Sans";
+}

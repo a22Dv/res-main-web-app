@@ -17,6 +17,11 @@ const Dashboard = ({userInfo, handleIsLoggedIn} : DashboardProps) => {
     return (
         <div>
             <h1>CIT-TMS | Student Dashboard</h1>
+            <a href='#'>Moodle</a>
+            <br/>
+            <a href='#'>Teams</a>
+            <br/>
+            <a href='#'>AIMS</a>
             {userInfo != null ? <h3>Welcome, {userInfo[2]}</h3> : <h3>Welcome.</h3>}
             {tasks && tasks.map((taskArray) => {
                return (<div style={{border : "2px solid black", padding : "5px"}}>
