@@ -47,7 +47,9 @@ const Dashboard = ({userInfo, handleIsLoggedIn} : DashboardProps) => {
                     </div>
                 </header>
                 <body className={styles.body}>
-
+                    <div className={styles.greeting}>
+                        <h1>Welcome, {userInfo[3]}</h1>
+                    </div>
                 </body>
             </div>
         </div>

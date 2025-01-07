@@ -1,7 +1,7 @@
 .navButton {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 0.2rem;
     align-items: center;
     justify-items: center;
     background-color: var(--primary-color);
@@ -10,13 +10,12 @@
 }
 .logo {
     width: 2rem;
-    fill: var(--secondary-color);
 }
 p {
     color: var(--primary-color);
     font-family: var(--primary-font);
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.2rem;
     transition: color 0.3s ease;
 }
 .navButton:hover {
