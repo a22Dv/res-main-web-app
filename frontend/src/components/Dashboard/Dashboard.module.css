@@ -1,0 +1,39 @@
+/* {
+    border: 1px solid green;
+} */
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+}
+.header .linksContainer {
+    display: flex;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+.headerLogo {
+    height: 80px;
+    width: auto;
+    padding: 1rem;
+}
+.body {
+    display: flex;
+    height: 88vh
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: var(--primary-color);
+    width: 5vw;
+    align-items: center;
+}

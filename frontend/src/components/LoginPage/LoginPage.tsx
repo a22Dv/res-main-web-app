@@ -29,6 +29,11 @@ const LoginPage = ({ handleIsLoggedIn, handleUserInfo } : LoginPageProps) => {
             }
         }
     }
+    const handleKeyDown = (event : React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') {
+            handleLogin()
+        }
+    }
     return (
         <div className={styles.loginPage}>
             <header className={styles.header}>
@@ -44,7 +49,7 @@ const LoginPage = ({ handleIsLoggedIn, handleUserInfo } : LoginPageProps) => {
                     <h2>Login</h2>
                     <div className={styles.loginBoxContainer}>
                         <input type='text' onChange={handleStudentID} placeholder='Student ID'></input>
-                        <input type='password' onChange={handlePassword} placeholder='Password'></input>
+                        <input type='password' onChange={handlePassword} placeholder='Password' onKeyDown={handleKeyDown}></input>
                         <Button onClick={handleLogin} text='Sign In'/>
                     </div>
                 </div>

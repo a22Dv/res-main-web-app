@@ -19,7 +19,7 @@
     padding: 1rem;
 }
 .body {
-    height: 90vh;
+    height: 88vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    top: -12vh;
     h2 {
         font-family: var(--primary-font);
         color: var(--primary-color);
