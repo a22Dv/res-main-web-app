@@ -8,6 +8,7 @@ import settingsLogo from '../../assets/settings-3-fill.svg';
 import listLogo from '../../assets/list-check-3.svg';
 import calendarLogo from '../../assets/calendar-schedule-fill.svg';
 import NavButton from '../shared/NavButton/NavButton.tsx';
+import TaskList from '../TaskList/TaskList.tsx';
 import Button from '../shared/Button/Button.tsx';
 
 interface DashboardProps {
@@ -48,8 +49,9 @@ const Dashboard = ({userInfo, handleIsLoggedIn} : DashboardProps) => {
                 </header>
                 <body className={styles.body}>
                     <div className={styles.greeting}>
-                        <h1>Welcome, {userInfo[3]}</h1>
+                        <h1>Welcome, {userInfo?.[3]}</h1>
                     </div>
+                    <TaskList tasks={tasks} />
                 </body>
             </div>
         </div>

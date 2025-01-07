@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     width: 95vw;
+    margin: 0px 0px 0px 80px;
 }
 .header {
     display: flex;
@@ -27,6 +28,8 @@
 }
 .body {
     display: flex;
+    flex-direction: column;
+    width: fit-content;
     height: 88vh;
 }
 .greeting {
@@ -39,9 +42,11 @@
 }
 .nav {
     display: flex;
+    position: fixed;
     flex-direction: column;
     justify-content: end;
     background-color: var(--primary-color);
+    min-height: 100vh;
     min-width: 80px;
     align-items: center;
 }
@@ -54,13 +59,14 @@
         justify-content: center;
         align-items: center;
         min-height: 50px;
+        min-width: 100vw;
         padding: 1rem;
+        border-top: 2px solid white;
+        
     }
     .body {
         height: 80vh;
     }
-}
-@media (max-width: 768px){
     .header {
         flex-direction: column;
         align-items: center;
@@ -71,5 +77,8 @@
     }
     .headerLogo {
         padding: 1rem;
+    }
+    .content {
+        margin: 0px
     }
 }
