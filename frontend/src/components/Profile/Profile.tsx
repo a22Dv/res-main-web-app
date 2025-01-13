@@ -1,3 +1,5 @@
+// TODO: FUNCTIONALITY MISSING. MUST RETRIEVE USER DETAILS FROM THE API / DATABASE.
+
 import NavBar from '../shared/NavBar/NavBar';
 import Header from '../shared/Header/Header';
 import Button from '../shared/Button/Button';
@@ -22,9 +24,24 @@ const Profile = ({ onLogOut } : ProfileProps) => {
                 <NavBar/>
             </div>
             <div className={styles.profileContent}>
-                <Header/>
+                <div>
+                    <Header/>
+                </div>
+                <div className={styles.profilePicture}>
+                    <img src={userLogo}/>
+                    <div className={styles.profilePictureDetails}>
+                        <h1>Dela Cruz, Juan A.</h1>
+                        <p>12-3456-789</p>
+                    </div>
+                </div>
                 <div className={styles.profileMainContent}>
+                    <ProfileDetailCell image={nameLogo} detail='Dela Cruz, Juan A.'/>
+                    <ProfileDetailCell image={sectionLogo} detail='12 - Enthusiasm'/>
+                    <ProfileDetailCell image={birthdayLogo} detail='January 13, 2025'/>
                     <ProfileDetailCell image={locationLogo} detail='Natalio B. Bacalso Ave., Cebu City, 6000 Cebu'/>
+                </div>
+                <div className={styles.buttonContainer}>
+                    <Button onClick={onLogOut} displayText='Sign Out' padding={1.5} fontSize={1.5}/>
                 </div>
             </div>
         </div>
