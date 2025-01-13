@@ -2,9 +2,10 @@
     margin: 0px;
     padding: 0px;
 }
+
 :root {
-    --primary-color: #89343B;
-    --secondary-color: #F8C400;
-    --background-color: #FFFFFF;
-    --primary-font: "Kumbh Sans";
+    --primary-color: #89343b;
+    --secondary-color: #f8c400;
+    --background-color: #ffffff;
+    --font-family: "Lexend", "Segoe UI", Helvetica, sans-serif;
 }

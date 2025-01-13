@@ -1,17 +1,14 @@
 .button {
     background-color: var(--primary-color);
     color: var(--background-color);
-    font-family: var(--primary-font);
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.6rem;
-    font-size: 1rem;
+    transition: color ease 0.3s, background-color ease 0.3s; 
+    font-family: var(--font-family);
     font-weight: 600;
-    margin: 0.2rem;
-    transition: background-color 0.3s ease
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
 }
 .button:hover {
-    background-color: var(--secondary-color);
     color: var(--primary-color);
-    cursor: pointer;
+    background-color: var(--secondary-color);
 }

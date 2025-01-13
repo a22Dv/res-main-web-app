@@ -1,13 +1,10 @@
-.hyperLink {
-    font-size: var(--link-font-size);
-    color: var(--link-color);
-    font-family: var(--link-font-family);
-    transition: color 0.3s ease;
+.a {
     text-decoration: none;
-    margin: 1rem;
-    padding: 1rem;
-  }
-  
-.hyperLink:hover {
-    color: var(--link-hover-color);
-  }
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    transition: color ease 0.3s;
+}
+a:hover {
+    color: var(--secondary-color);
+}
