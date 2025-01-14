@@ -1,6 +1,7 @@
 import HyperLink from '../HyperLink/HyperLink';
 import citLogoFull from '../../../assets/cit-logo-full.png';
 import styles from './header.module.css';
+
 const Header = () => {
     return (
         <div className={styles.header}>
@@ -27,4 +28,5 @@ const Header = () => {
         </div>
     );
 }
+
 export default Header;

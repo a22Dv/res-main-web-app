@@ -1,8 +1,14 @@
+// Prop type interface.
 interface ProtectedRouteProps {
     passedElement : React.ReactElement;
     auth : boolean;
 }
+
+// Main.
 const ProtectedRoute = ({ passedElement, auth } : ProtectedRouteProps) => {
+
+    // Returns the passed element only if auth evaluates to true. 
+    // Otherwise sends a 401 Unauthorized error.
     return auth ? (
         passedElement
     ) :(
@@ -14,4 +20,6 @@ const ProtectedRoute = ({ passedElement, auth } : ProtectedRouteProps) => {
         401 Unauthorized</h1>
     );
 }
+
+// Default export.
 export default ProtectedRoute;

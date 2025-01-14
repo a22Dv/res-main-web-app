@@ -1,8 +1,10 @@
+/*Get rid of default element styling. Removing this might result in styling issues.*/
 * {
     margin: 0px;
     padding: 0px;
 }
 
+/*Holds all the colors/fonts used in the web-application.*/
 :root {
     --primary-color: #89343b;
     --secondary-color: #f8c400;
