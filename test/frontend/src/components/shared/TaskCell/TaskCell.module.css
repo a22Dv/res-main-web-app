@@ -1,0 +1,38 @@
+.taskCell {
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color: var(--primary-color);
+    border-radius: 1.5rem;
+    color: var(--background-color);
+    font-family: var(--font-family);
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    transition: max-height ease-in-out 0.7s;
+    overflow: hidden;
+    .mainBar {
+        padding-bottom: 1rem;
+        .taskMainDetails {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            width: 100%;
+            p {
+                font-weight: bolder;
+                font-size: 1.5rem;
+            }
+        }
+        .taskMinorDetails {
+            display: flex;
+            flex-direction: row;
+            p {
+                padding: 0rem 1rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.taskCell:hover {
+    max-height: 500px;
+    cursor: pointer;
+}

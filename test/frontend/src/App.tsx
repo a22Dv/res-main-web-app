@@ -6,7 +6,6 @@ import { Route, Routes, useNavigate, Navigate } from 'react-router';
 import LoginPage from './components/LoginPage/LoginPage.tsx';
 import HomePage from './components/HomePage/HomePage.tsx';
 import TaskList from './components/TaskList/TaskList.tsx';
-import Calendar from './components/Calendar/Calendar.tsx';
 import Profile from './components/Profile/Profile.tsx';
 
 // Routing / Mock API imports.
@@ -56,10 +55,6 @@ const App = () => {
       <Route
         path='/home'
         element={<ProtectedRoute auth={isAuth} passedElement={<HomePage/>}/>}
-      />
-      <Route
-        path='/calendar'
-        element={<ProtectedRoute auth={isAuth} passedElement={<Calendar/>}/>}
       />
       <Route
         path='/tasklist'

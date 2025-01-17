@@ -8,6 +8,14 @@
     max-width: calc(100vw - 100px); 
     height: 100vh;
 }
+.taskListMainContent {
+    h1 {
+        padding-left: 2rem;
+        font-family: var(--font-family);
+        color: var(--primary-color);
+    }
+}
+
 @media (max-width: 768px) {
     .taskList { 
         flex-direction: column-reverse;
