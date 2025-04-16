@@ -1,0 +1,29 @@
+.taskList {
+    display: flex;
+    height: 100vh;
+}
+.taskListContent {
+    /*Adjust for Nav bar, must be equal to navbar height.*/
+    margin-left: 100px;
+    max-width: calc(100vw - 100px); 
+    height: 100vh;
+}
+.taskListMainContent {
+    h1 {
+        padding-left: 2rem;
+        font-family: var(--font-family);
+        color: var(--primary-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .taskList { 
+        flex-direction: column-reverse;
+        justify-content: start;
+        .taskListContent {
+            margin-left: 0px;
+            max-width: 100vw;
+            height: calc(100vh - 100px);
+        }
+    }
+}

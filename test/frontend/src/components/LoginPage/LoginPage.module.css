@@ -1,0 +1,92 @@
+/*Main entry point*/
+.loginPage {
+
+    /*For structuring.*/
+    display: flex;
+    flex-direction: column;
+
+    /*Main content*/
+    .loginBody {
+
+        /*Structuring. Centers login panel on page.*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /*Must take up full height but leave room to accomodate header(150px)*/
+        height: calc(100vh - 150px);
+
+        /*Holds the main panel for login.*/
+        .loginBoxContainer {
+
+            /*Structuring. Arranges the label and the box itself in a column.*/
+            display: flex;
+            flex-direction: column;
+
+            /*Set dimensions.*/
+            height: 20rem;
+            width: 30rem;
+
+            /*Offset login box to take into account the header.*/
+            transform: translateY(-100px);
+
+            /*Label above login box.*/
+            h1 {
+                font-family: var(--font-family);
+                color: var(--primary-color);
+
+                /*Offset to the right to align to visible edge of login box.*/
+                transform: translateX(0.5rem);
+
+                font-size: 2.5rem;
+            }
+
+            /*Main box for input*/
+            .loginBox {
+
+                /*Structuring. Arranges input boxes and elements in a column. Equally spaced.*/
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                /*Set height. Depends on, and must be smaller than container height.*/
+                height: 15rem;
+                
+                /*Set padding to space out input boxes/elements from container.
+                As well as prevents the input boxes from taking up too much space*/
+                padding: 1rem;
+                
+                /*Input boxes*/
+                input {
+                    /*Prevents the typed out text from sticking close to the input box edge*/
+                    padding: 0.5rem;
+
+                    /*For styling.*/
+                    border-radius: 1rem;
+                    border: 2px solid var(--primary-color);
+                    font-family: var(--font-family);
+                }
+
+                /*For labels. Styling.*/
+                p {
+                    font-family: var(--font-family);
+                    color: var(--primary-color);
+                }
+
+                /*For error message. Styling.*/
+                .error {
+                    font-family: var(--font-family);
+                    color: red;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .loginPage {
+        .loginBody {
+            /*Accomodates new header height.*/
+            height: calc(100vh - 200px);
+        }
+    }
+}

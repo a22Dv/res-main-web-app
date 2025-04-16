@@ -1,0 +1,115 @@
+
+/*Holds the entire page.*/
+.profile {
+
+    /*Structuring. Nav bar must be beside the main content.*/
+    display: flex;
+    height: 100vh;
+
+    /*Holds the main content for the page.*/
+    .profileContent {
+
+        /*Structuring. Sections must be arranged in a column.*/
+        display: flex;
+        flex-direction: column;
+        
+        /*Adjust for Nav bar, must be equal to navbar width.*/
+        margin-left: 100px;
+        max-width: calc(100vw - 100px); 
+
+        /*Content must take up full page height.*/
+        height: 100vh;
+
+        /*Holds name/pfp/ID of the student.*/
+        .profilePicture {
+
+            /*Structuring. Must have the items aligned at the center and in a row. justified to the left (default).*/
+            display: flex;
+            align-items: center;
+
+            /*Take up as much space if possible. For highlighting purposes.*/
+            flex-grow: 1;
+
+            /*To prevent the text from blending in with the background color and going beyond.*/
+            min-height: min-content;
+        
+            /*Set color.*/
+            background-color: var(--primary-color);
+
+            /*Holds the profile picture.*/
+            img {
+                /*Hardcoded height.*/
+                height: 100px;
+
+                /*Border is a solid circle.*/
+                border: 3px solid var(--background-color);
+                border-radius: 100%;
+
+                /*Allows space between the profile and the border and the border to other elements.*/
+                padding: 2rem;
+                margin: 2rem;
+            }
+
+            /*Holds the details of the profile (name/ID number)*/
+            .profilePictureDetails {
+
+                /*Must be aligned as a column.*/
+                display: flex;
+                flex-direction: column;
+
+                /*Hardcoded height. Align items at center of container.*/
+                height: 100px;
+                justify-content: center;
+
+                /*Styling.*/
+                h1, p {
+                    color: var(--background-color);
+                    font-family: var(--font-family);
+                }
+                h1 {
+                    font-size: 4rem;
+                }
+            }
+        }
+        /*Holds the details.*/
+        .profileMainContent {
+            /*Take up as much space as possible.*/
+            flex-grow: 1;
+        }
+        
+    }
+
+    /*Holds the sign out button.*/
+    .buttonContainer {
+        /*Push the button to the right edge, and leave some space.*/
+        display: flex;
+        justify-content: end;
+        padding:2rem 2rem 2rem 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .profile {
+
+        /*Arranged in a column. In reverse since navbar is at the top instead of the home page.*/
+        flex-direction: column-reverse;
+
+        /*Somehow goes to the bottom without this line. DO NOT REMOVE.*/ 
+        justify-content: start; 
+        
+        .profileContent {
+            margin-left: 0px;
+            max-width: 100vw;
+            height: calc(100vh - 100px);
+            .profilePicture {
+                .profilePictureDetails {
+                    h1 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .buttonContainer {
+                padding: 2rem 2rem calc(2rem + 100px) 2rem
+            }
+        }
+    }
+}
