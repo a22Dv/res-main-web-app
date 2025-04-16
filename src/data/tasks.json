@@ -1,0 +1,242 @@
+[
+  {
+    "taskId": "RES3-001",
+    "subject": "RES3",
+    "teacher": "Dr. Evelyn Reed",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Finalize Research Proposal",
+    "instructions": "Submit the final draft of your research proposal including methodology and expected outcomes. Check rubric for details.",
+    "startDate": "2025-06-10T08:00:00Z",
+    "endDate": "2025-06-20T23:59:59Z"
+  },
+  {
+    "taskId": "PHYS12B-001",
+    "subject": "PHYS12B",
+    "teacher": "Mr. Kenji Tanaka",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Lab Report: Optics Experiment",
+    "instructions": "Complete the lab report for the reflection and refraction experiment conducted last week.",
+    "startDate": "2025-06-12T08:00:00Z",
+    "endDate": "2025-06-18T17:00:00Z"
+  },
+  {
+    "taskId": "LIT12-001",
+    "subject": "LIT12",
+    "teacher": "Ms. Isabella Rossi",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Essay: Symbolism in The Great Gatsby",
+    "instructions": "Write a 5-page essay analyzing the use of symbolism in F. Scott Fitzgerald's The Great Gatsby.",
+    "startDate": "2025-06-15T08:00:00Z",
+    "endDate": "2025-06-25T23:59:59Z"
+  },
+  {
+    "taskId": "RES4-001",
+    "subject": "RES4",
+    "teacher": "Dr. Evelyn Reed",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Literature Review Draft 1",
+    "instructions": "Submit the first draft of your literature review. Minimum 10 sources.",
+    "startDate": "2025-06-22T08:00:00Z",
+    "endDate": "2025-10-05T23:59:59Z"
+  },
+  {
+    "taskId": "MIL-001",
+    "subject": "MIL",
+    "teacher": "Mr. Marcus Jones",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Report: Media Influence Analysis",
+    "instructions": "Analyze a recent news event and report on potential media biases.",
+    "startDate": "2025-06-18T08:00:00Z",
+    "endDate": "2025-06-28T17:00:00Z"
+  },
+  {
+    "taskId": "ENTREP-001",
+    "subject": "ENTREP",
+    "teacher": "Mrs. Chloe Davis",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Business Model Canvas - Initial Draft",
+    "instructions": "Create an initial draft of the Business Model Canvas for your proposed venture.",
+    "startDate": "2025-06-20T08:00:00Z",
+    "endDate": "2025-06-30T23:59:59Z"
+  },
+  {
+    "taskId": "BIO12B-001",
+    "subject": "BIO12B",
+    "teacher": "Dr. Anya Sharma",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Lab Report: Cell Structure Observation",
+    "instructions": "Prepare a detailed lab report on the observation of plant and animal cell structures under a microscope.",
+    "startDate": "2025-06-05T08:00:00Z",
+    "endDate": "2025-06-15T17:00:00Z"
+  },
+  {
+    "taskId": "PEH-001",
+    "subject": "PEH",
+    "teacher": "Mr. David Chen",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Fitness Log: Week 1-4",
+    "instructions": "Submit your fitness log documenting your physical activities for the first four weeks of the semester.",
+    "startDate": "2025-06-01T08:00:00Z",
+    "endDate": "2025-06-29T23:59:59Z"
+  },
+  {
+    "taskId": "BIO12B-002",
+    "subject": "BIO12B",
+    "teacher": "Dr. Anya Sharma",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Quiz: Mendelian Genetics",
+    "instructions": "Take the online quiz on Mendelian Genetics covering monohybrid and dihybrid crosses.",
+    "startDate": "2025-06-25T08:00:00Z",
+    "endDate": "2025-06-27T23:59:59Z"
+  },
+  {
+    "taskId": "PEH-002",
+    "subject": "PEH",
+    "teacher": "Mr. David Chen",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Presentation: Healthy Diet Plan",
+    "instructions": "Prepare and present a 5-minute presentation on a healthy diet plan, focusing on nutritional balance.",
+    "startDate": "2025-10-02T08:00:00Z",
+    "endDate": "2025-10-06T17:00:00Z"
+  },
+  {
+    "taskId": "BIO12B-003",
+    "subject": "BIO12B",
+    "teacher": "Dr. Anya Sharma",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Research Paper: Impact of Climate Change on Biodiversity",
+    "instructions": "Write a research paper discussing the impact of climate change on biodiversity. Include at least 5 scientific sources.",
+    "startDate": "2025-10-10T08:00:00Z",
+    "endDate": "2025-10-25T23:59:59Z"
+  },
+  {
+    "taskId": "PEH-003",
+    "subject": "PEH",
+    "teacher": "Mr. David Chen",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Practical Exam: Basic First Aid Skills",
+    "instructions": "Demonstrate basic first aid skills including CPR, bandaging, and Heimlich maneuver in a practical exam.",
+    "startDate": "2025-10-16T08:00:00Z",
+    "endDate": "2025-10-23T17:00:00Z"
+  },
+  {
+    "taskId": "RES3-002",
+    "subject": "RES3",
+    "teacher": "Dr. Evelyn Reed",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Research Topic Proposal",
+    "instructions": "Submit a proposal outlining your intended research topic. Include a brief rationale and preliminary research questions.",
+    "startDate": "2025-08-28T08:00:00Z",
+    "endDate": "2025-06-06T23:59:59Z"
+  },
+  {
+    "taskId": "RES3-003",
+    "subject": "RES3",
+    "teacher": "Dr. Evelyn Reed",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Presentation: Research Proposal Defense",
+    "instructions": "Present and defend your research proposal to the class and panel. Be prepared to answer questions regarding your methodology and expected outcomes.",
+    "startDate": "2025-06-27T08:00:00Z",
+    "endDate": "2025-10-04T23:59:59Z"
+  },
+  {
+    "taskId": "PHYS12B-002",
+    "subject": "PHYS12B",
+    "teacher": "Mr. Kenji Tanaka",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Problem Set: Kinematics",
+    "instructions": "Solve the assigned problems on kinematics, including displacement, velocity, and acceleration. Show all your work.",
+    "startDate": "2025-06-04T08:00:00Z",
+    "endDate": "2025-06-11T23:59:59Z"
+  },
+  {
+    "taskId": "PHYS12B-003",
+    "subject": "PHYS12B",
+    "teacher": "Mr. Kenji Tanaka",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Midterm Exam: Mechanics",
+    "instructions": "Prepare for a midterm exam covering topics in mechanics, including Newton's laws, work, and energy.",
+    "startDate": "2025-06-29T08:00:00Z",
+    "endDate": "2025-10-06T23:59:59Z"
+  },
+  {
+    "taskId": "LIT12-002",
+    "subject": "LIT12",
+    "teacher": "Ms. Isabella Rossi",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Reading Response: Chapter 1-3 Gatsby",
+    "instructions": "Write a short reading response to chapters 1-3 of The Great Gatsby, focusing on character introductions and setting.",
+    "startDate": "2025-06-08T08:00:00Z",
+    "endDate": "2025-06-14T23:59:59Z"
+  },
+  {
+    "taskId": "LIT12-003",
+    "subject": "LIT12",
+    "teacher": "Ms. Isabella Rossi",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Class Debate: American Dream in Gatsby",
+    "instructions": "Participate in a class debate on the theme of the American Dream as portrayed in The Great Gatsby. Prepare arguments and counter-arguments.",
+    "startDate": "2025-06-26T08:00:00Z",
+    "endDate": "2025-06-28T23:59:59Z"
+  },
+  {
+    "taskId": "RES4-002",
+    "subject": "RES4",
+    "teacher": "Dr. Evelyn Reed",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Literature Review Draft 2",
+    "instructions": "Submit the second draft of your literature review, incorporating feedback from the first draft and expanding on your analysis.",
+    "startDate": "2025-10-07T08:00:00Z",
+    "endDate": "2025-10-18T23:59:59Z"
+  },
+  {
+    "taskId": "RES4-003",
+    "subject": "RES4",
+    "teacher": "Dr. Evelyn Reed",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Final Literature Review",
+    "instructions": "Submit the final version of your literature review. Ensure all feedback has been addressed and the document is ready for assessment.",
+    "startDate": "2025-10-19T08:00:00Z",
+    "endDate": "2025-10-30T23:59:59Z"
+  },
+  {
+    "taskId": "MIL-002",
+    "subject": "MIL",
+    "teacher": "Mr. Marcus Jones",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Quiz: Propaganda Techniques",
+    "instructions": "Take a quiz on various propaganda techniques and their historical and contemporary applications.",
+    "startDate": "2025-06-11T08:00:00Z",
+    "endDate": "2025-06-13T23:59:59Z"
+  },
+  {
+    "taskId": "MIL-003",
+    "subject": "MIL",
+    "teacher": "Mr. Marcus Jones",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Group Project: Mock Press Conference",
+    "instructions": "Work in groups to organize and conduct a mock press conference on a chosen current event, demonstrating media interaction skills.",
+    "startDate": "2025-06-29T08:00:00Z",
+    "endDate": "2025-10-05T17:00:00Z"
+  },
+  {
+    "taskId": "ENTREP-002",
+    "subject": "ENTREP",
+    "teacher": "Mrs. Chloe Davis",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Market Research Report",
+    "instructions": "Conduct and compile a market research report to validate the assumptions in your Business Model Canvas.",
+    "startDate": "2025-06-08T08:00:00Z",
+    "endDate": "2025-06-17T23:59:59Z"
+  },
+  {
+    "taskId": "ENTREP-003",
+    "subject": "ENTREP",
+    "teacher": "Mrs. Chloe Davis",
+    "schoolYear": "A.Y. 2024-2025",
+    "title": "Pitch Deck Presentation",
+    "instructions": "Create and present a pitch deck for your proposed venture, based on your Business Model Canvas and market research findings.",
+    "startDate": "2025-10-01T08:00:00Z",
+    "endDate": "2025-10-10T23:59:59Z"
+  }
+]

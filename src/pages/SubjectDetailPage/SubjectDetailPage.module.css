@@ -1,0 +1,179 @@
+/* src/pages/SubjectDetailPage/SubjectDetailPage.module.css */
+.subjectDetail {
+    /* Assuming AppLayout provides main padding */
+  }
+  
+  .subjectHeader {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 30px 25px 20px 25px; /* Generous padding */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    position: relative; /* For absolute positioning of content if needed */
+    min-height: 120px; /* Ensure minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to bottom */
+  }
+  
+  .headerContent {
+    /* Content within the header */
+    text-align: left;
+  }
+  
+  .subjectTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .teacherName {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 5px;
+    opacity: 0.9;
+  }
+  
+  .taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between task items */
+  }
+  
+  .taskItemContainer {
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 6px;
+    overflow: hidden; /* Clip content */
+    background-color: var(--color-white);
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .taskItemContainer:focus-within {
+     box-shadow: 0 0 0 2px var(--color-primary-light, rgba(136, 52, 59, 0.3)); /* Focus ring */
+  }
+  
+  
+  .taskItemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    background-color: transparent; /* Button is transparent */
+    border: none;
+    border-bottom: 1px solid #e0e0e0; /* Separator line only when expanded */
+    color: var(--color-primary); /* Text color is primary */
+    font-size: 1rem;
+  }
+  
+  /* Remove bottom border if item is NOT expanded */
+  .taskItemHeader:not([aria-expanded="true"]) {
+     border-bottom: none;
+  }
+  
+  .taskItemHeader:hover {
+    background-color: #f9f9f9; /* Slight hover background */
+  }
+  
+  .taskTitle {
+    font-weight: 600;
+    margin-right: 15px; /* Space between title and deadline */
+    flex-grow: 1; /* Allow title to take space */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .taskDeadline {
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    display: flex; /* For aligning icon if added */
+    align-items: center; /* For aligning icon if added */
+    gap: 8px; /* Space for icon */
+  }
+  
+  .taskDetails {
+    padding: 15px 20px;
+    background-color: #fdfdfd; /* Slightly different background for details */
+    border-top: none; /* Top border is handled by header */
+    animation: fadeIn 0.3s ease-out; /* Simple fade-in */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .instructions {
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    white-space: pre-wrap; /* Preserve line breaks from instructions */
+  }
+  
+  .dateInfo {
+    display: flex;
+    justify-content: flex-end; /* Align dates to the right */
+    gap: 20px;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee; /* Separator for dates */
+  }
+  
+  .noTasksMessage {
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+    text-align: center;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .subjectHeader {
+      padding: 20px 15px 15px 15px;
+      min-height: 100px;
+      margin-bottom: 20px;
+    }
+    .subjectTitle {
+      font-size: 1.8rem;
+    }
+    .teacherName {
+      font-size: 0.9rem;
+    }
+    .taskItemHeader {
+      padding: 12px 15px;
+      flex-direction: column; /* Stack title and deadline */
+      align-items: flex-start; /* Align left */
+      gap: 5px;
+    }
+    .taskTitle {
+       margin-right: 0;
+       white-space: normal; /* Allow title wrap */
+    }
+    .taskDeadline {
+       font-size: 0.85rem;
+       width: 100%; /* Take full width */
+       justify-content: space-between; /* Push icon to right if present */
+    }
+    .taskDetails {
+      padding: 12px 15px;
+    }
+    .instructions {
+      font-size: 0.9rem;
+    }
+    .dateInfo {
+      flex-direction: column; /* Stack dates vertically */
+      align-items: flex-end; /* Keep aligned right */
+      gap: 5px;
+      font-size: 0.8rem;
+    }
+  }

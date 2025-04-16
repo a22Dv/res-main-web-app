@@ -1,0 +1,118 @@
+/* src/pages/TaskListPage/TaskListPage.module.css */
+.taskList {
+    padding: 0; /* Remove default padding if AppLayout provides it */
+  }
+  
+  .pageTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 25px;
+  }
+  
+  .subjectGrid {
+    display: grid;
+    /* Desktop: 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* Gap between cards */
+  }
+  
+  .subjectCardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Ensures link takes up grid cell */
+    border-radius: 10px; /* Rounded corners for the card */
+    overflow: hidden; /* Clip content to rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    height: 200px; /* Fixed height for cards, adjust as needed */
+    display: flex; /* Use flex to structure top/bottom */
+    flex-direction: column; /* Stack top/bottom vertically */
+  }
+  
+  .subjectCardLink:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  .subjectCard {
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+  }
+  
+  .cardTop {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 15px 20px;
+    /* Takes up roughly 1/3+ height */
+    flex-basis: 35%; /* Adjust percentage as needed */
+    min-height: 70px; /* Ensure minimum height */
+    display: flex;
+    align-items: flex-start; /* Align heading to top */
+    justify-content: flex-start; /* Align heading left */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .subjectCardLink:hover .cardTop { /* Change top background on link hover */
+    background-color: var(--color-secondary);
+  }
+  
+  .subjectName {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  .cardBottom {
+    background-color: var(--color-white);
+    padding: 15px 20px;
+    flex-grow: 1; /* Takes remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+  }
+  
+  .detailText {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .detailText:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .subjectGrid {
+      /* Mobile: 1 column */
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .pageTitle {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  
+    .subjectCardLink {
+      height: 180px; /* Slightly smaller cards on mobile */
+    }
+  
+    .subjectName {
+      font-size: 1.2rem;
+    }
+  
+    .cardTop {
+       padding: 12px 15px;
+       min-height: 60px;
+    }
+  
+    .cardBottom {
+       padding: 12px 15px;
+    }
+  
+    .detailText {
+       font-size: 0.85rem;
+    }
+  }

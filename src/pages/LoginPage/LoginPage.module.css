@@ -1,0 +1,107 @@
+/* src/pages/LoginPage/LoginPage.module.css */
+.loginPageContainer {
+    min-height: 100vh;
+    background-color: var(--color-white);
+  }
+  
+  .mainContent {
+    display: flex;
+    justify-content: center; /* Center the pane horizontally */
+    align-items: center; /* Center the pane vertically */
+    min-height: calc(100vh - var(--header-height-desktop, 70px)); /* Adjust based on actual header height */
+    padding-top: var(--header-height-desktop, 70px); /* Offset content below fixed header */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .loginPane {
+    width: 100%;
+    max-width: 420px; /* Max width of the login form */
+    padding: 30px 25px; /* Padding inside the pane */
+    /* No specific background or border needed per requirements */
+  }
+  
+  .title {
+    color: var(--color-primary);
+    margin-bottom: 25px;
+    font-size: 2rem; /* Larger title */
+    font-weight: 700;
+    text-align: left; /* Left aligned as requested */
+  }
+  
+  .inputGroup {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-text-dark);
+    font-weight: 500;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    font-family: inherit;
+  }
+  
+  .input:focus {
+      border-color: var(--color-primary);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(136, 52, 59, 0.2); /* Subtle focus ring */
+  }
+  
+  .button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin-top: 10px; /* Space above button */
+  }
+  
+  .button:hover,
+  .button:focus, /* Added focus for accessibility */
+  .button:active { /* Added active state for click feedback */
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    outline: none; /* Remove default outline on focus if custom style applied */
+  }
+  
+  .errorMessage {
+    color: #d93025; /* Google-like error color */
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: var(--breakpoint-md)) {
+    .mainContent {
+      min-height: calc(100vh - var(--header-height-mobile, 100px));
+      padding-top: var(--header-height-mobile, 100px);
+      align-items: flex-start; /* Align pane closer to top on mobile */
+      padding-top: calc(var(--header-height-mobile, 100px) + 30px); /* Ensure space below header */
+    }
+  
+    .loginPane {
+        padding: 20px 15px;
+    }
+  
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+  }

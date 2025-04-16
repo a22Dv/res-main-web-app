@@ -1,0 +1,72 @@
+/* src/components/Header/Header.module.css */
+.header {
+  background-color: var(--color-white);
+  position: fixed; /* <<< ENSURE THIS IS FIXED */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height-desktop, 70px); /* Default height */
+  z-index: 1000; /* Ensure header stays on top */
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* No transition needed for position/size usually */
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1920px; /* Or a smaller content width like 1280px */
+  margin: 0 auto; /* Center container */
+  padding: 0 25px; /* Side padding */
+}
+
+.logo {
+  height: 80px; /* Adjust as needed */
+  width: auto;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 35px; /* Space between links */
+}
+
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem; /* <<< INCREASED FONT SIZE (Optional) */
+  padding: 8px 0; /* <<< INCREASED PADDING (Optional) */
+  transition: color 0.2s ease-in-out;
+}
+
+
+.link:hover {
+  color: var(--color-secondary);
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .header {
+    height: var(--header-height-mobile, 100px); /* Adjust mobile height */
+  }
+
+  .container {
+    flex-direction: column; /* Stack logo and links */
+    justify-content: center; /* Center items vertically */
+    padding: 10px 15px;
+    gap: 15px; /* Space between logo and nav */
+  }
+
+  .logo {
+      height: 55px; /* Slightly smaller logo on mobile */
+  }
+
+  .navLinks {
+    gap: 25px; /* Adjust gap for mobile */
+    padding-bottom: 5px; /* Add some padding at the bottom */
+  }
+}

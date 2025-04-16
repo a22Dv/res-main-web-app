@@ -1,0 +1,199 @@
+/* src/components/NavigationBar/NavigationBar.module.css */
+
+.navBar {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    z-index: 900; /* Below header */
+    transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, bottom 0.3s ease; /* Smooth transitions */
+  }
+  
+  .navItem {
+    color: var(--color-white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text/icon left */
+    padding: 12px 20px;
+    width: 90%; /* Width of the clickable area */
+    margin: 0 auto; /* Center items like profile */
+    border-radius: 6px;
+    gap: 12px; /* Space between icon and text */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    cursor: pointer; /* For button-like items */
+    background: none; /* Reset button background */
+    border: none; /* Reset button border */
+    font-size: 1rem; /* Match base font size */
+    font-family: inherit; /* Ensure button uses correct font */
+    text-align: left; /* Ensure button text aligns left */
+  }
+  
+  .navItem:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+  }
+  
+  .navText {
+    display: block; /* Default visible */
+  }
+  
+  .activeLink {
+    /* Example active style: slightly different background or bolder text */
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+  }
+  
+  .activeLink:hover {
+    /* Ensure hover on active looks consistent or slightly different */
+     background-color: var(--color-secondary);
+     color: var(--color-primary);
+  }
+  
+  
+  .profileContainer {
+    position: relative; /* Needed for absolute positioning of the menu */
+    width: 90%; /* Match navItem width */
+    margin: 0 auto; /* Center container */
+    margin-top: auto; /* Pushes profile to the bottom in desktop view */
+    padding-bottom: 20px; /* Space at the very bottom */
+  }
+  
+  .profileButton {
+    width: 100%; /* Make button fill container */
+    justify-content: flex-start; /* Keep icon/text left aligned */
+  }
+  
+  .profileMenu {
+    position: absolute;
+    background-color: var(--color-secondary);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    min-width: 180px; /* Minimum width for the menu */
+    z-index: 950; /* Above navbar, below header */
+    /* Positioning is handled by media queries */
+  }
+  
+  .menuItem {
+    color: var(--color-primary);
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap; /* Prevent wrapping */
+    display: flex; /* For icon alignment if added */
+    align-items: center; /* For icon alignment if added */
+    gap: 8px; /* For icon alignment if added */
+  }
+  
+  .logoutButton {
+    color: var(--color-white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text/icon left */
+    font-weight: 400;
+    padding: 12px 20px;
+    width: 90%; /* Width of the clickable area */
+    margin: 0 auto; /* Center items like profile */
+    border-radius: 6px;
+    gap: 12px; /* Space between icon and text */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    cursor: pointer; /* For button-like items */
+    background: none; /* Reset button background */
+    border: none; /* Reset button border */
+    font-size: 1rem; /* Match base font size */
+    font-family: inherit; /* Ensure button uses correct font */
+    text-align: left; /* Ensure button text aligns left */
+  }
+  
+  .logoutButton:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent; /* Invisible overlay */
+      z-index: 940; /* Below menu, above content */
+  }
+  
+  
+  /* --- Desktop Styles (Default) --- */
+  .navBar {
+    left: 0;
+    top: var(--header-height-desktop, 70px);
+    width: var(--nav-width-desktop, 200px);
+    height: calc(100vh - var(--header-height-desktop, 70px));
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to top */
+    gap: 10px; /* Space between nav items */
+    padding-top: 30px; /* Space below header */
+  }
+  
+  .profileMenu {
+    bottom: 100%; /* Position menu above the button */
+    left: 10px; /* Slightly offset from the left edge */
+    margin-bottom: 8px; /* Space between button and menu */
+  }
+  
+  
+  /* --- Mobile Styles --- */
+  @media (max-width: 768px) {
+    .navBar {
+      left: 0;
+      bottom: 0;
+      top: auto; /* Override top positioning */
+      width: 100%;
+      height: var(--nav-height-mobile, 60px);
+      flex-direction: row; /* Align items horizontally */
+      justify-content: space-around; /* Distribute items evenly */
+      padding: 0 10px; /* Horizontal padding */
+      gap: 0; /* Reset gap for space-around */
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Top shadow for bottom bar */
+    }
+  
+    .navItem {
+      flex-direction: column; /* Stack icon and text vertically */
+      justify-content: center; /* Center icon/text */
+      align-items: center; /* Center icon/text */
+      width: auto; /* Let flexbox determine width */
+      padding: 5px; /* Smaller padding */
+      gap: 2px; /* Less space between icon/text */
+      font-size: 0.75rem; /* Smaller text */
+      height: 100%; /* Fill height */
+      margin: 0; /* Reset margin */
+    }
+  
+    .navText {
+       /* Optionally hide text on very small screens if needed */
+       /* display: none; */
+    }
+  
+     .profileContainer {
+       position: static; /* Reset position for mobile */
+       width: auto; /* Reset width */
+       margin: 0; /* Reset margin */
+       padding: 0; /* Reset padding */
+       height: 100%; /* Fill height */
+       display: flex; /* Allow button to center */
+       align-items: center; /* Allow button to center */
+     }
+  
+     .profileButton {
+       width: auto; /* Reset width */
+       height: 100%; /* Fill height */
+       justify-content: center; /* Center icon/text */
+     }
+  
+     .profileMenu {
+       bottom: calc(var(--nav-height-mobile, 60px) + 10px); /* Position above the bottom bar */
+       right: 10px; /* Align to the right */
+       left: auto; /* Override desktop left */
+       margin-bottom: 0; /* Reset margin */
+     }
+  }

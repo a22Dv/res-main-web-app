@@ -1,0 +1,157 @@
+/* src/pages/DashboardPage/DashboardPage.module.css */
+.dashboardPage {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Try to fill the content area height */
+}
+
+.greetingSection {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee; /* Separator */
+}
+
+.welcomeMessage {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--color-primary); /* Default dark text */
+}
+
+.taskCount {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-primary); /* Primary color for subtitle */
+}
+
+.tasksSection {
+  flex-grow: 1; /* Allow this section to take remaining space */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Important for flex-grow and scrolling */
+}
+
+.tasksLabel {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.taskListContainer {
+  flex-grow: 1; /* Make the container grow */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Space for scrollbar */
+  margin-right: -10px; /* Counteract padding for alignment */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between task items */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.taskListContainer::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.taskListContainer {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.taskItemLink {
+  text-decoration: none;
+  display: block;
+  border-radius: 6px; /* Match subject detail task radius */
+  overflow: hidden;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  border: 1px solid #e0e0e0; /* Add border to the link wrapper */
+  background-color: var(--color-white); /* Background is now on the link */
+}
+
+.taskItemLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06); /* Add subtle shadow on hover */
+  background-color: #f9f9f9; /* Slight background change on hover */
+}
+.taskItem {
+  /* REMOVE background-color: var(--color-primary); */
+  /* REMOVE color: var(--color-white); */
+  color: var(--color-primary); /* <<< SET text color to primary */
+  padding: 15px 20px;
+  /* REMOVE border-radius: 8px; (Handled by link now) */
+  /* KEEP display: grid; */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 15px;
+  /* REMOVE transition: background-color..., color...; (Handled by link hover) */
+}
+
+
+.taskSubject {
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.taskTitle {
+  font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.taskDeadline {
+  font-size: 0.9rem;
+  /* font-style: italic; /* Optional: remove italic if desired */
+  white-space: nowrap;
+  font-weight: 500; /* Match subject detail style */
+}
+
+
+.noTasksMessage {
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .welcomeMessage {
+    font-size: 1.6rem;
+  }
+  .taskCount {
+    font-size: 1rem;
+  }
+  .tasksLabel {
+    font-size: 1.3rem;
+  }
+  .taskItem {
+    padding: 12px 15px;
+    gap: 10px;
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+    text-align: left;
+  }
+  .taskSubject {
+    grid-row: 1;
+    font-size: 0.85rem;
+  }
+  .taskTitle {
+     grid-row: 2;
+     font-size: 0.95rem;
+     white-space: normal;
+     overflow: visible;
+     text-overflow: clip;
+  }
+  .taskDeadline {
+     grid-row: 3;
+     font-size: 0.85rem;
+     margin-top: 5px;
+     width: 100%; /* Ensure it takes full width */
+     text-align: right; /* Align date right on mobile */
+  }
+}

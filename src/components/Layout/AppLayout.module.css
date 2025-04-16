@@ -1,0 +1,34 @@
+/* src/components/Layout/AppLayout.module.css */
+
+.appContainer {
+    background-color: var(--color-white);
+    min-height: 100vh;
+  }
+  
+  .mainWrapper {
+    /* This wrapper helps manage layout with fixed elements */
+    display: flex;
+    padding-top: var(--header-height-desktop, 70px); /* Space for fixed header */
+  }
+  
+  .contentArea {
+    flex-grow: 1; /* Takes up remaining space */
+    padding: 25px; /* Padding around page content */
+    margin-left: var(--nav-width-desktop, 200px); /* Space for fixed sidebar */
+    min-height: calc(100vh - var(--header-height-desktop, 70px)); /* Ensure content area can fill viewport height */
+    transition: margin-left 0.3s ease, padding-bottom 0.3s ease; /* Smooth transition for mobile */
+  }
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .mainWrapper {
+      padding-top: var(--header-height-mobile, 100px); /* Adjust for mobile header */
+    }
+  
+    .contentArea {
+      margin-left: 0; /* No sidebar margin */
+      padding: 15px; /* Less padding on mobile */
+      padding-bottom: calc(var(--nav-height-mobile, 60px) + 15px); /* Space for fixed bottom nav + content padding */
+      min-height: calc(100vh - var(--header-height-mobile, 100px)); /* Adjust min-height */
+    }
+  }
